@@ -5,7 +5,7 @@ A small but rather substantial oversight I've noticed with most ping-checking sy
 
 The best source I've found for this is this post on the DevForum regarding network rates: https://devforum.roblox.com/t/are-there-any-replication-methods-that-are-faster-than-the-standard-20-hz-remotes/168634/9, but as the linked documentation seems to have been deleted, I can't speak to the exact rates authoritatively.
 
-Regardless, this introduces a problem: checking ping by simply firing remotes from the server, to the client, and back to the server can introduce artificial delays of anywhere from 30ms-50ms, a large discrepancy considering the ping-reliant nature of sword fighting.
+Regardless, this introduces a problem: checking ping by simply firing remotes from the server, to the client, and back to the server, can introduce artificial delays of anywhere from 30ms-50ms, a large discrepancy considering the ping-reliant nature of sword fighting.
 
 The best way to calculate ping is probably calling `Player:GetNetworkPing()`, but as that updates slowly (once every 1-2 seconds), I've created an open-source ping measurement system, I'm calling it Paddle (yk getting ping, ponging it back) that accounts for network queuing. To be clear, there's no perfect way to measure ping, as even something that seems to update constantly like player positions is actually updated at sub-60 FPS rates, and so you're forced to decide *what kind of ping* you want to measure.
 
