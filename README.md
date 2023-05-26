@@ -19,3 +19,5 @@ Paddle measures the total time it takes for a changed property to replicate from
 ## Paddle Setup:
 - You must have already made a leaderstat named "Ping". It must be a StringValue.
 - You must have a RemoteEvent in ReplicatedStorage named "Pong".
+- Create `PaddleServer.lua` as a Script under ServerScriptService
+- Create `PaddleClient.lua` as a LocalScript under StarterPlayer.StarterPlayerScripts
