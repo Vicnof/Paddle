@@ -1,5 +1,4 @@
 # Paddle: Better Ping Calculation
-⸻
 ## Background
 A small but rather substantial oversight I've noticed with most ping-checking systems is not accounting for the queue system Roblox uses to queue up client/server replication. For example, if you call `FireClient()` twice in consecutive frames, the client *won't* receive one event, then a frame later the second. Rather, they're joined up in a queue and the client will receive both invocations at the same time.
 
